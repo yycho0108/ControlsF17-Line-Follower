@@ -1,0 +1,213 @@
+
+   --- Expanded Deck Component Count ---
+A's 7
+C's 16
+G's 14
+R's 65
+S's 14
+V's 1
+tot: 117
+
+
+    --- Expanded Netlist ---
+* C:\Users\ycho\Desktop\Academics\2017\FA\controls\line_follower\sim.asc
+s:u1:1 vpid vcc u1:n002 vpid u1:q 
+s:u1:2 0 vpid vpid u1:n002 u1:q 
+a:u1:1 n001 vgnd 0 0 0 0 u1:n002 0 ota g=0.01 ref=0 iout=0.00159154943091895 cout=1.59154943091895e-010 en=0 enk=0 in=0 ink=0 incm=0 incmk=0 vhigh=1e308 vlow=-1e308
+c:u1:3 vpid 0 1p 
+c:u1:4 vcc vpid 1p 
+r:u1:2 u1:n002 0 200000000 noiseless 
+r:u1:1 vcc u1:n002 200000000 noiseless 
+r:u1:3 vcc vgnd 1000000000 noiseless 
+r:u1:4 vcc n001 1000000000 noiseless 
+r:u1:5 n001 0 1000000000 noiseless 
+r:u1:6 vgnd 0 1000000000 noiseless 
+g:u1:1 0 u1:n002 0 u1:n002 table(0 0 10 0.00318309886183791)
+g:u1:2 u1:n002 0 u1:n002 vcc table(0 0 10 0.00318309886183791)
+v1 vcc 0 9v
+rl p001 vcc 100
+r§dr vin_raw p001 1000 
+rs 0 vin_raw 2k
+r6 n001 vin 600k
+r7 n001 p002 31.2k
+s:u2:1 mleft vcc u2:n002 mleft u2:q 
+s:u2:2 0 mleft mleft u2:n002 u2:q 
+a:u2:1 n002 n004 0 0 0 0 u2:n002 0 ota g=0.01 ref=0 iout=0.00159154943091895 cout=1.59154943091895e-010 en=0 enk=0 in=0 ink=0 incm=0 incmk=0 vhigh=1e308 vlow=-1e308
+c:u2:3 mleft 0 1p 
+c:u2:4 vcc mleft 1p 
+r:u2:2 u2:n002 0 200000000 noiseless 
+r:u2:1 vcc u2:n002 200000000 noiseless 
+r:u2:3 vcc n004 1000000000 noiseless 
+r:u2:4 vcc n002 1000000000 noiseless 
+r:u2:5 n002 0 1000000000 noiseless 
+r:u2:6 n004 0 1000000000 noiseless 
+g:u2:1 0 u2:n002 0 u2:n002 table(0 0 10 0.00318309886183791)
+g:u2:2 u2:n002 0 u2:n002 vcc table(0 0 10 0.00318309886183791)
+s:u3:1 mright vcc u3:n002 mright u3:q 
+s:u3:2 0 mright mright u3:n002 u3:q 
+a:u3:1 n006 n007 0 0 0 0 u3:n002 0 ota g=0.01 ref=0 iout=0.00159154943091895 cout=1.59154943091895e-010 en=0 enk=0 in=0 ink=0 incm=0 incmk=0 vhigh=1e308 vlow=-1e308
+c:u3:3 mright 0 1p 
+c:u3:4 vcc mright 1p 
+r:u3:2 u3:n002 0 200000000 noiseless 
+r:u3:1 vcc u3:n002 200000000 noiseless 
+r:u3:3 vcc n007 1000000000 noiseless 
+r:u3:4 vcc n006 1000000000 noiseless 
+r:u3:5 n006 0 1000000000 noiseless 
+r:u3:6 n007 0 1000000000 noiseless 
+g:u3:1 0 u3:n002 0 u3:n002 table(0 0 10 0.00318309886183791)
+g:u3:2 u3:n002 0 u3:n002 vcc table(0 0 10 0.00318309886183791)
+rf1 n002 mleft 5000 
+rf2 n006 mright 5000 
+c1 vpid p002 47µf
+r3 vcc n008 1k
+r4 n008 0 1k
+s:u4:1 vgnd vcc u4:n002 vgnd u4:q 
+s:u4:2 0 vgnd vgnd u4:n002 u4:q 
+a:u4:1 vgnd n008 0 0 0 0 u4:n002 0 ota g=0.01 ref=0 iout=0.00159154943091895 cout=1.59154943091895e-010 en=0 enk=0 in=0 ink=0 incm=0 incmk=0 vhigh=1e308 vlow=-1e308
+c:u4:3 vgnd 0 1p 
+c:u4:4 vcc vgnd 1p 
+r:u4:2 u4:n002 0 200000000 noiseless 
+r:u4:1 vcc u4:n002 200000000 noiseless 
+r:u4:3 vcc n008 1000000000 noiseless 
+r:u4:4 vcc vgnd 1000000000 noiseless 
+r:u4:5 vgnd 0 1000000000 noiseless 
+r:u4:6 n008 0 1000000000 noiseless 
+g:u4:1 0 u4:n002 0 u4:n002 table(0 0 10 0.00318309886183791)
+g:u4:2 u4:n002 0 u4:n002 vcc table(0 0 10 0.00318309886183791)
+r1 vcc n009 .5k
+r2 n009 0 1k
+s:u5:1 vref vcc u5:n002 vref u5:q 
+s:u5:2 0 vref vref u5:n002 u5:q 
+a:u5:1 vref n009 0 0 0 0 u5:n002 0 ota g=0.01 ref=0 iout=0.00159154943091895 cout=1.59154943091895e-010 en=0 enk=0 in=0 ink=0 incm=0 incmk=0 vhigh=1e308 vlow=-1e308
+c:u5:3 vref 0 1p 
+c:u5:4 vcc vref 1p 
+r:u5:2 u5:n002 0 200000000 noiseless 
+r:u5:1 vcc u5:n002 200000000 noiseless 
+r:u5:3 vcc n009 1000000000 noiseless 
+r:u5:4 vcc vref 1000000000 noiseless 
+r:u5:5 vref 0 1000000000 noiseless 
+r:u5:6 n009 0 1000000000 noiseless 
+g:u5:1 0 u5:n002 0 u5:n002 table(0 0 10 0.00318309886183791)
+g:u5:2 u5:n002 0 u5:n002 vcc table(0 0 10 0.00318309886183791)
+r5 n002 vpid 5000 
+r10 n004 vgnd 5000 
+r11 n006 vgnd 5000 
+r12 n007 vpid 5000 
+r13 vref n007 5000 
+r14 vref n004 5000 
+c3 vin n001 2.2µf
+s:u6:1 vin vcc u6:n002 vin u6:q 
+s:u6:2 0 vin vin u6:n002 u6:q 
+a:u6:1 n003 n005 0 0 0 0 u6:n002 0 ota g=0.01 ref=0 iout=0.00159154943091895 cout=1.59154943091895e-010 en=0 enk=0 in=0 ink=0 incm=0 incmk=0 vhigh=1e308 vlow=-1e308
+c:u6:3 vin 0 1p 
+c:u6:4 vcc vin 1p 
+r:u6:2 u6:n002 0 200000000 noiseless 
+r:u6:1 vcc u6:n002 200000000 noiseless 
+r:u6:3 vcc n005 1000000000 noiseless 
+r:u6:4 vcc n003 1000000000 noiseless 
+r:u6:5 n003 0 1000000000 noiseless 
+r:u6:6 n005 0 1000000000 noiseless 
+g:u6:1 0 u6:n002 0 u6:n002 table(0 0 10 0.00318309886183791)
+g:u6:2 u6:n002 0 u6:n002 vcc table(0 0 10 0.00318309886183791)
+r8 vin_raw n005 1000 
+r9 n003 voff 1000 
+r15 vin n003 5000 
+r16 n005 0 5000 
+r17 n010 0 1k
+r18 vcc n010 2300 
+s:u7:1 voff vcc u7:n002 voff u7:q 
+s:u7:2 0 voff voff u7:n002 u7:q 
+a:u7:1 voff n010 0 0 0 0 u7:n002 0 ota g=0.01 ref=0 iout=0.00159154943091895 cout=1.59154943091895e-010 en=0 enk=0 in=0 ink=0 incm=0 incmk=0 vhigh=1e308 vlow=-1e308
+c:u7:3 voff 0 1p 
+c:u7:4 vcc voff 1p 
+r:u7:2 u7:n002 0 200000000 noiseless 
+r:u7:1 vcc u7:n002 200000000 noiseless 
+r:u7:3 vcc n010 1000000000 noiseless 
+r:u7:4 vcc voff 1000000000 noiseless 
+r:u7:5 voff 0 1000000000 noiseless 
+r:u7:6 n010 0 1000000000 noiseless 
+g:u7:1 0 u7:n002 0 u7:n002 table(0 0 10 0.00318309886183791)
+g:u7:2 u7:n002 0 u7:n002 vcc table(0 0 10 0.00318309886183791)
+.tran 0 10.0002 0.0002 uic
+.model u7:q sw(ron=10 roff=10meg vt=0 vh=-.1 vser=0 ilimit=0.025 noiseless level=2 epsilon=0)
+.model u6:q sw(ron=10 roff=10meg vt=0 vh=-.1 vser=0 ilimit=0.025 noiseless level=2 epsilon=0)
+.model u5:q sw(ron=10 roff=10meg vt=0 vh=-.1 vser=0 ilimit=0.025 noiseless level=2 epsilon=0)
+.model u4:q sw(ron=10 roff=10meg vt=0 vh=-.1 vser=0 ilimit=0.025 noiseless level=2 epsilon=0)
+.model u3:q sw(ron=10 roff=10meg vt=0 vh=-.1 vser=0 ilimit=0.025 noiseless level=2 epsilon=0)
+.model u2:q sw(ron=10 roff=10meg vt=0 vh=-.1 vser=0 ilimit=0.025 noiseless level=2 epsilon=0)
+.model u1:q sw(ron=10 roff=10meg vt=0 vh=-.1 vser=0 ilimit=0.025 noiseless level=2 epsilon=0)
+.ic v(vcc)=9
+.end
+
+Per .tran options, skipping operating point for transient analysis.
+.step dr=1000
+Changing Tseed to 1e-008
+Changing Tseed to 1e-010
+Changing Tseed to 1e-007
+Changing Tseed to 1e-011
+.step dr=1500
+.step dr=2000
+.step dr=2500
+.step dr=3000
+.step dr=3500
+.step dr=4000
+
+
+Measurement: m_left
+  step	v(mleft)	at
+     1	7.8726	9.0002
+     2	7.51805	9.0002
+     3	6.25637	9.0002
+     4	5.30137	9.0002
+     5	4.55504	9.0002
+     6	4.125	9.0002
+     7	4.12472	9.0002
+
+Measurement: m_right
+  step	v(mright)	at
+     1	4.12739	9.0002
+     2	4.48194	9.0002
+     3	5.74362	9.0002
+     4	6.69862	9.0002
+     5	7.44495	9.0002
+     6	7.87499	9.0002
+     7	7.87527	9.0002
+
+Measurement: v_in
+  step	v(vin)	at
+     1	8.98851	9.0002
+     2	8.13779	9.0002
+     3	5.11362	9.0002
+     4	2.82705	9.0002
+     5	1.03757	9.0002
+     6	0.00574856	9.0002
+     7	0.00507994	9.0002
+
+Measurement: v_pid
+  step	v(vpid)	at
+     1	2.62739	9.0002
+     2	2.98195	9.0002
+     3	4.24362	9.0002
+     4	5.19862	9.0002
+     5	5.94496	9.0002
+     6	6.375	9.0002
+     7	6.37528	9.0002
+
+
+Date: Fri Dec 01 02:47:26 2017
+Total elapsed time: 9.993 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2924
+traniter = 2924
+tranpoints = 1308
+accept = 1235
+rejected = 69
+matrix size = 29
+fillins = 11
+Matrix Compiler1: 2.69 KB object code size  3.4/2.3/[1.4]
+Matrix Compiler2: 3.41 KB object code size  2.2/2.6/[1.6]
+
+

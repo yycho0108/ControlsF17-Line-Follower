@@ -1,0 +1,59 @@
+* C:\Users\ycho\Desktop\Academics\2017\FA\controls\line_follower\sim.asc
+XU1 VGND N001 Vcc 0 Vpid level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+V1 Vcc 0 9V
+Rl P001 Vcc 100
+R§dR Vin_raw P001 {dR}
+Rs 0 Vin_raw 2K
+R6 N001 Vin 600K
+R7 N001 P002 31.2K
+XU2 N004 N002 Vcc 0 Mleft level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+XU3 N007 N006 Vcc 0 Mright level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+Rf1 N002 Mleft {Rf}
+Rf2 N006 Mright {Rf}
+C1 Vpid P002 47µF
+R3 Vcc N008 1K
+R4 N008 0 1K
+XU4 N008 VGND Vcc 0 VGND level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+R1 Vcc N009 .5K
+R2 N009 0 1K
+XU5 N009 Vref Vcc 0 Vref level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+R5 N002 Vpid {Ri}
+R10 N004 VGND {Ri}
+R11 N006 VGND {Ri}
+R12 N007 Vpid {Ri}
+R13 Vref N007 {Rf}
+R14 Vref N004 {Rf}
+C3 Vin N001 2.2µF
+XU6 N005 N003 Vcc 0 Vin level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+R8 Vin_raw N005 {Rd}
+R9 N003 Voff {Rd}
+R15 Vin N003 {Gi*Rd}
+R16 N005 0 {Gi*Rd}
+R17 N010 0 1K
+R18 Vcc N010 {Roff}
+XU7 N010 Voff Vcc 0 Voff level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+.param k_p=15
+.param k_i=7.07
+.param k_d=14.1
+.param Rf={Ri}
+.param Ri=5K
+.param Ro = 500K
+.step param dR 1K 4K 500
+.tran 0 {t0+dt} {t0} uic
+.param t0=.2m
+.param d=0.11
+* .save V(mleft) V(mright) V(vref) V(vcc) V(vgnd) V(vin) V(Vpid)
+.ic V(vcc)=9
+.MEASURE TRAN m_left FIND V(mleft) AT={t0+0.9*dt}
+.MEASURE TRAN m_right FIND V(mright) AT={t0+0.9*dt}
+.MEASURE TRAN v_in FIND V(vin) AT={t0+0.9*dt}
+.MEASURE TRAN v_pid FIND V(vpid) AT={t0+0.9*dt}
+* .param dR=5K
+.param dt = 10.0
+.param v_s=80
+.param Rd=1K
+.param Gi=5
+.param Roff=2.3K
+.lib UniversalOpamps2.sub
+.backanno
+.end
